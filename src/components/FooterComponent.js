@@ -41,7 +41,7 @@ class Footer extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center cpr">
                         <div className="col-auto">
                             <p>© Copyright 2021. Shooes.com.vn</p>
                         </div>
