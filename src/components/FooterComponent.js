@@ -6,7 +6,7 @@ class Footer extends Component {
             <div className="footer">
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 col-sm-4 align-self-center">
+                        <div className="col-12 col-sm-4">
                             <div className="text-center">
                                 <h5>Our Mission</h5>
                                 <h6>We asked ourselves what we wanted this company to stand for. We didn't want to just clean shoes. I wasn't even into shoes - but I was passionate about customer service.</h6>

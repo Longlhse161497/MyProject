@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Header from "./HeaderComponent";
-import Footer from "../FooterComponent";
+import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import Service from "./ServiceComponent";
 import Booking from "./BookingComponent";
