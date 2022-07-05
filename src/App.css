@@ -28,12 +28,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.row-header{
+.row-header {
   margin: 0px auto;
   padding: 0px auto;
 }
@@ -67,6 +68,19 @@ address {
   background-color: #282424;
 }
 
-.cpr{
+.cpr {
   padding-top: 10px;
+}
+
+.breadcrumb {
+  background-color: white !important;
+}
+
+.bookrow{
+  padding-top: 0px;
+}
+
+.bimg {
+  max-width: 100%;
+  max-height: 100%;
 }
