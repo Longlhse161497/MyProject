@@ -56,7 +56,12 @@
 .jumbotron {
   padding: 70px 30px 70px 30px !important;
   margin: 0px auto;
-  background-color: #e0dcdc !important;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../public/assets/images/banner.jpg);
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: floralwhite;
 }
 
 address {
