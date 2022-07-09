@@ -14,15 +14,13 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Provider store={store}>
-          <BrowserRouter>
-            <div className='App'>
-              <Main></Main>
-            </div>
-          </BrowserRouter>
-        </Provider>
-      </div>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className='App'>
+            <Main></Main>
+          </div>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
