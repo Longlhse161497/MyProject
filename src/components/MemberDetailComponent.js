@@ -2,41 +2,42 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 
-function RenderServices({ service }) {
+function RenderMembers({ member }) {
     return (
         <>
-            <div className="col-12 col-sm-6 pb-3">
-                <img src={service.image} alt={service.name} className="bimg"></img>
+            <div className="col-12 col-sm-6 pb-3 d-flex justify-content-center">
+                <img src={member.image} alt={member.name} className="bimg"></img>
             </div>
             <div className="col-12 col-sm-6 pb-3">
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
+                <h3>{member.name}</h3>
+                <h5>{member.abbr}</h5>
+                <p>{member.description}</p>
             </div>
         </>
     );
 }
 
-class ServiceDetail extends React.Component {
+class MemberDetail extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        if (this.props.service !== null) {
-            const service = this.props.service;
+        if (this.props.member !== null) {
+            const member = this.props.member;
             return (
                 <div className="container">
                     <div className="row">
                         <Breadcrumb>
-                            <BreadcrumbItem><Link to="/services">Services</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>{service.name}</BreadcrumbItem>
+                            <BreadcrumbItem><Link to="/about">About Us</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>{member.name}</BreadcrumbItem>
                         </Breadcrumb>
                         <div className="col-12">
-                            <h3>{service.name}</h3>
+                            <h3>{member.name}</h3>
                             <hr></hr>
                         </div>
                     </div>
                     <div className="row">
-                        <RenderServices service={service}></RenderServices>
+                        <RenderMembers member={member}></RenderMembers>
                     </div>
                 </div>
             );
@@ -49,4 +50,4 @@ class ServiceDetail extends React.Component {
     }
 }
 
-export default ServiceDetail;
+export default MemberDetail;

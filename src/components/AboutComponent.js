@@ -1,8 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem, Card, CardImg, CardTitle, CardText } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-function About() {
+function RenderMember({ member, onClick }) {
+    return (
+        <Card className="border-0">
+            <Link to={`/about/${member.id}`} style={{ color: '#282424' }}>
+                <CardImg src={member.image} alt={member.name}></CardImg>
+                <CardTitle>{member.name}</CardTitle>
+            </Link>
+        </Card>
+    );
+}
+
+function About(props) {
+    const members = props.members.map((member) => {
+        return (
+            <div className="col-12 col-md-6 d-flex justify-content-center py-3">
+                <div key={member.id}>
+                    <RenderMember member={member}></RenderMember>
+                </div>
+            </div>
+        );
+    });
     return (
         <>
             <div className="container">
@@ -18,7 +38,7 @@ function About() {
                 </div>
                 <div className="row">
                     <div className="col-12 col-sm-6 d-flex justify-content-center py-2">
-                        <img src="assets/images/logo.jpg" className="rounded-circle bimg" style={{height:'250px'}}></img>
+                        <img src="assets/images/logo.jpg" className="rounded-circle bimg" style={{ height: '250px' }}></img>
                     </div>
                     <div className="col-12 col-sm-6 pb-2 text-center">
                         <h2>Our Mission</h2>
@@ -35,7 +55,7 @@ function About() {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-6 py-2">
+                    <div className="col-12 col-md-6 py-2">
                         <h2>Tan Phu branch</h2>
                         <address>
                             <h6>100 Vuon Lai, Tan Phu District, HCM</h6>
@@ -44,7 +64,7 @@ function About() {
                             <h6><i className="fa fa-envelope-o"></i> Email: <a href="mailto:ShooesVN@gmail.com">ShooesVN@gmail</a></h6>
                         </address>
                     </div>
-                    <div className="col-12 col-sm-6 py-2">
+                    <div className="col-12 col-md-6 py-2">
                         <h2>Map to our shop</h2>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.302246138668!2d106.6297747!3d10.788147100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eaa055e9ee5%3A0xb2eb03f7a3fd9ba0!2zxJAuIFbGsOG7nW4gTMOgaSwgVMOibiBQaMO6LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1657341663473!5m2!1svi!2s" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -55,6 +75,11 @@ function About() {
                     <div className="col-12 col-sm d-flex justify-content-center py-3" style={{ background: '#282424', color: 'floralwhite' }}>
                         <h1>Meet our team</h1>
                     </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    {members}
                 </div>
             </div>
         </>
