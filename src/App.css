@@ -96,3 +96,21 @@ address {
   background-position: center center;
   height: 350px;
 }
+
+.modal.fade {
+  opacity: 1;
+}
+
+.modal-backdrop
+{
+  opacity:0.5 !important;
+}
+.btn1{
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.btn2{
+  margin-right: 2px;
+  margin-left: 2px;
+}
