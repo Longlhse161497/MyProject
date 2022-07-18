@@ -101,11 +101,14 @@ address {
   opacity: 1;
 }
 
-.modal-backdrop
-{
-  opacity:0.5 !important;
+.modal-backdrop {
+  opacity: 0.5 !important;
 }
 
-.nav-btn{
+.nav-btn {
   margin: 2px;
+}
+
+.carousel-text{
+  text-align: center;
 }

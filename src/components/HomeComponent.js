@@ -19,12 +19,16 @@ function Home(props) {
     return (
         <div className="container">
             <div className="row d-flex justify-content-center">
-                <Carousel loop autoPlay mobileBreakpoint={100} autoplay={2000}>
+                <Carousel loop mobileBreakpoint={100} autoplay={2000}>
                     <Carousel.Item>
                         <img width="100%" src={props.promotion.image} alt={props.promotion.name} style={{height:"90%"}}></img>
+                        <h4 className="carousel-text">{props.promotion.name}</h4>
+                        <p className="carousel-text d-none d-md-block">{props.promotion.description}</p>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img width="100%" src={props.service.image} alt={props.service.name} style={{height:"90%"}}></img>
+                        <h4 className="carousel-text">{props.service.name}</h4>
+                        <p className="carousel-text d-none d-md-block">{props.service.description}</p>
                     </Carousel.Item>
                 </Carousel>
             </div>
