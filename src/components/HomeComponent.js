@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from "reactstrap";
+import { Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, CarouselItem } from "reactstrap";
+import Carousel from "better-react-carousel";
 
 function RenderCard({ item }) {
     return (
@@ -17,6 +18,16 @@ function RenderCard({ item }) {
 function Home(props) {
     return (
         <div className="container">
+            <div className="row d-flex justify-content-center">
+                <Carousel loop autoPlay mobileBreakpoint={100} autoplay={2000}>
+                    <Carousel.Item>
+                        <img width="100%" src={props.promotion.image} alt={props.promotion.name} style={{height:"90%"}}></img>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img width="100%" src={props.service.image} alt={props.service.name} style={{height:"90%"}}></img>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
             <div className="row">
                 <div className="col-12 col-md m-1">
                     <h2>Featured</h2>

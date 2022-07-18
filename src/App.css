@@ -105,12 +105,7 @@ address {
 {
   opacity:0.5 !important;
 }
-.btn1{
-  margin-right: 2px;
-  margin-left: 2px;
-}
 
-.btn2{
-  margin-right: 2px;
-  margin-left: 2px;
+.nav-btn{
+  margin: 2px;
 }
